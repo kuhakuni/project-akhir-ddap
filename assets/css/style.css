@@ -4,7 +4,6 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	min-height: 200vh;
 }
 a {
 	text-decoration: none;
@@ -278,4 +277,29 @@ a.text-gray:hover {
 	.cta-btn-container > * {
 		margin: 3px;
 	}
+}
+/*--------------------------------------------------------------
+# Facts Section
+--------------------------------------------------------------*/
+.facts {
+	background-color: var(--color-primary);
+	padding: 2.5rem 0;
+	color: #fff;
+}
+.facts .container > * {
+	margin: 1.5rem 0;
+}
+.facts h1 {
+	font-weight: 700;
+	font-size: calc(1rem + 2vw);
+}
+.facts p {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+/*--------------------------------------------------------------
+# Problem Section
+--------------------------------------------------------------*/
+.problem {
+	min-height: 20vh;
 }
