@@ -1,0 +1,10 @@
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav > * {
+	margin: 0 0.8rem;
+}
+.nav-link {
+	font-weight: 500;
+}
