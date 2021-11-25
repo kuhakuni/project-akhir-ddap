@@ -1,10 +1,169 @@
-body {
-	font-family: "Montserrat", sans-serif;
+:root {
+	--color-primary: #ff5349;
 }
 
-.navbar-nav > * {
-	margin: 0 0.8rem;
+body {
+	font-family: "Montserrat", sans-serif;
+	min-height: 200vh;
 }
-.nav-link {
+a {
+	text-decoration: none;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+	transition: all 0.5s;
+	z-index: 997;
+	padding: 20px 0;
+}
+
+.header.header-scrolled {
+	background: #fff;
+	padding: 15px 0;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+}
+
+.header .logo {
+	line-height: 0;
+}
+
+.header .logo img {
+	max-height: 40px;
+	margin-right: 6px;
+}
+
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+/**
+  * Desktop Navigation 
+  */
+.navbar {
+	padding: 0;
+}
+
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+.navbar li {
+	position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0 10px 30px;
+	font-size: 16px;
 	font-weight: 500;
+	color: #000;
+	white-space: nowrap;
+	transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+	font-size: 12px;
+	line-height: 0;
+	margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+	color: #ff5349;
+}
+
+.navbar .getstarted {
+	background: #fff;
+	padding: 8px 20px;
+	margin-left: 30px;
+	border: #ff5349 solid 2px;
+	border-radius: 8px;
+	color: #ff5349;
+}
+
+.navbar .getstarted:hover {
+	color: #fff;
+	background: #ff5349;
+}
+
+/**
+  * Mobile Navigation 
+  */
+.mobile-nav-toggle {
+	color: #ff5349;
+	font-size: 28px;
+	cursor: pointer;
+	display: none;
+	line-height: 0;
+	transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+	color: #fff;
+}
+
+@media (max-width: 991px) {
+	.mobile-nav-toggle {
+		display: block;
+	}
+	.navbar ul {
+		display: none;
+	}
+}
+
+.navbar-mobile {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(255, 83, 73, 0.9);
+	transition: 0.3s;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.navbar-mobile ul {
+	display: block;
+	position: absolute;
+	top: 55px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	padding: 10px 0;
+	border-radius: 10px;
+	background-color: #fff;
+	overflow-y: auto;
+	transition: 0.3s;
+}
+
+.navbar-mobile a {
+	padding: 10px 20px;
+	font-size: 15px;
+	color: #000;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
+	color: #ff5349;
+}
+
+.navbar-mobile .getstarted {
+	margin: 15px;
 }
