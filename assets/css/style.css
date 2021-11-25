@@ -55,8 +55,7 @@ a {
 	position: relative;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar a {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -68,8 +67,7 @@ a {
 	transition: 0.3s;
 }
 
-.navbar a i,
-.navbar a:focus i {
+.navbar a i {
 	font-size: 12px;
 	line-height: 0;
 	margin-left: 5px;
@@ -274,7 +272,7 @@ a.text-gray:hover {
 
 @media (max-width: 576px) {
 	.cta-btn-container {
-		flex-direction: column !important;
+		flex-direction: column;
 		margin: 10px 0;
 	}
 	.cta-btn-container > * {
