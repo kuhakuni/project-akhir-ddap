@@ -11,6 +11,13 @@
 			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<!-- AOS CSS -->
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<!-- Swiper CSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+		/>
 		<!-- Bootstrap CSS -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
@@ -50,10 +57,7 @@
 							<a class="nav-link scrollto" href="#">Tentang</a>
 						</li>
 						<li>
-							<a
-								class="getstarted scrollto"
-								href="#"
-								onclick="Swal.fire('Maaf..', 'Fitur belum tersedia', 'error')"
+							<a class="getstarted scrollto" href="#" onclick="showSwal()"
 								>Masuk</a
 							>
 						</li>
@@ -86,6 +90,7 @@
 							>
 								<a
 									href="#about"
+									onclick="showSwal()"
 									class="
 										btn-get-started
 										scrollto
@@ -121,6 +126,8 @@
 		></script>
 		<script src="assets/js/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/sweetalert2/dist/sweetalert2.all.min.js"></script>
+		<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<script src="assets/js/script.js"></script>
 	</body>
 </html>
