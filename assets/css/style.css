@@ -8,6 +8,7 @@ body {
 a {
 	text-decoration: none;
 }
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -76,28 +77,28 @@ a {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover > a {
-	color: #ff5349;
+	color: var(--color-primary);
 }
 
 .navbar .getstarted {
 	background: #fff;
 	padding: 8px 20px;
 	margin-left: 30px;
-	border: #ff5349 solid 2px;
+	border: var(--color-primary) solid 2px;
 	border-radius: 8px;
-	color: #ff5349;
+	color: var(--color-primary);
 }
 
 .navbar .getstarted:hover {
 	color: #fff;
-	background: #ff5349;
+	background: var(--color-primary);
 }
 
 /**
   * Mobile Navigation 
   */
 .mobile-nav-toggle {
-	color: #ff5349;
+	color: var(--color-primary);
 	font-size: 28px;
 	cursor: pointer;
 	display: none;
@@ -158,12 +159,13 @@ a {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover > a {
-	color: #ff5349;
+	color: var(--color-primary);
 }
 
 .navbar-mobile .getstarted {
 	margin: 15px;
 }
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -192,7 +194,7 @@ a {
 	border-radius: 8px;
 	transition: 0.5s;
 	color: #fff;
-	background: #ff5349;
+	background: var(--color-primary);
 }
 
 .hero .btn-get-started span {
@@ -213,6 +215,10 @@ a {
 
 .hero .hero-img {
 	text-align: right;
+}
+
+.hero .number-one {
+	color: var(--color-primary);
 }
 
 .cta-btn-container {
@@ -278,6 +284,7 @@ a.text-gray:hover {
 		margin: 3px;
 	}
 }
+
 /*--------------------------------------------------------------
 # Facts Section
 --------------------------------------------------------------*/
@@ -297,6 +304,7 @@ h1 {
 	font-size: 1.2rem;
 	font-weight: 400;
 }
+
 /*--------------------------------------------------------------
 # Problem Section
 --------------------------------------------------------------*/
@@ -328,6 +336,33 @@ h1 {
 	.problem .box img {
 		width: 20rem;
 	}
+}
+/*--------------------------------------------------------------
+# Answer Section
+--------------------------------------------------------------*/
+.answer {
+	padding: 2rem 0;
+	background-color: var(--color-primary);
+}
+
+.answer .row {
+	display: flex;
+	align-items: center;
+	color: #fff;
+}
+
+.answer p {
+	margin: 1.5rem 0;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: justify;
+}
+
+/*--------------------------------------------------------------
+# Article Section
+--------------------------------------------------------------*/
+.article {
+	min-height: 80vh;
 }
 /*--------------------------------------------------------------
 # Back to top

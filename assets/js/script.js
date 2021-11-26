@@ -148,7 +148,7 @@
 				icon: "error",
 				html: "Fitur masih belum tersedia:(",
 				confirmButtonColor: "#ff5349",
-				closeOnCancel: true,
+				scrollbarPadding: true,
 			});
 		});
 
