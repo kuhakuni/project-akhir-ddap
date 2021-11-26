@@ -151,6 +151,19 @@
 				closeOnCancel: true,
 			});
 		});
+
+		/**
+		 * Back to top scroll
+		 */
+		$(".back-to-top").click(() => {
+			$("body,html").animate(
+				{
+					scrollTop: 0,
+				},
+				50
+			);
+		});
+
 		/**
 		 * Testimonials slider
 		 */
