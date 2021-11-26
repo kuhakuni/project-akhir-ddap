@@ -189,6 +189,7 @@ a {
 }
 
 .hero .btn-get-started {
+	cursor: pointer;
 	line-height: 0;
 	padding: 15px 40px;
 	border-radius: 8px;
@@ -337,6 +338,7 @@ h1 {
 		width: 20rem;
 	}
 }
+
 /*--------------------------------------------------------------
 # Answer Section
 --------------------------------------------------------------*/
