@@ -87,11 +87,7 @@
 			true
 		);
 
-		/**
-		 * Show "feature disabled" message
-		 */
-		$(".form").click((e) => {
-			e.preventDefault();
+		const disabledFeatures = () => {
 			Swal.fire({
 				title: "Maaf..",
 				icon: "error",
@@ -99,6 +95,14 @@
 				confirmButtonColor: "#ff5349",
 				scrollbarPadding: true,
 			});
+		};
+
+		/**
+		 * Show "feature disabled" message
+		 */
+		$(".disabled-features, .post-box").click((e) => {
+			e.preventDefault();
+			disabledFeatures();
 		});
 
 		/**
