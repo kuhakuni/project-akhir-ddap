@@ -32,24 +32,6 @@
 		};
 
 		/**
-		 * Scrolls to an element with header offset
-		 */
-		const scrollto = (el) => {
-			let header = select("#header");
-			let offset = header.offsetHeight;
-
-			if (!header.classList.contains("header-scrolled")) {
-				offset -= 10;
-			}
-
-			let elementPos = select(el).offsetTop;
-			window.scrollTo({
-				top: elementPos - offset,
-				behavior: "smooth",
-			});
-		};
-
-		/**
 		 * Toggle .header-scrolled class to #header when page is scrolled
 		 */
 		let selectHeader = select("#header");
@@ -84,7 +66,7 @@
 		/**
 		 * Mobile nav toggle
 		 */
-		on("click", ".mobile-nav-toggle", function (e) {
+		on("click", ".mobile-nav-toggle", function () {
 			select("#navbar").classList.toggle("navbar-mobile");
 			this.classList.toggle("bi-list");
 			this.classList.toggle("bi-x");
@@ -104,39 +86,6 @@
 			},
 			true
 		);
-
-		/**
-		 * Porfolio isotope and filter
-		 */
-		window.addEventListener("load", () => {
-			let portfolioContainer = select(".portfolio-container");
-			if (portfolioContainer) {
-				let portfolioIsotope = new Isotope(portfolioContainer, {
-					itemSelector: ".portfolio-item",
-					layoutMode: "fitRows",
-				});
-
-				let portfolioFilters = select("#portfolio-flters li", true);
-
-				on(
-					"click",
-					"#portfolio-flters li",
-					function (e) {
-						e.preventDefault();
-						portfolioFilters.forEach(function (el) {
-							el.classList.remove("filter-active");
-						});
-						this.classList.add("filter-active");
-
-						portfolioIsotope.arrange({
-							filter: this.getAttribute("data-filter"),
-						});
-						aos_init();
-					},
-					true
-				);
-			}
-		});
 
 		/**
 		 * Show "feature disabled" message
@@ -168,6 +117,7 @@
 		 */
 		$('a[href^="#"]').on("click", function (e) {
 			e.preventDefault();
+			if (this.href.substring(this.href.lastIndexOf("/") + 1) === "#") return;
 			$("html, body").animate(
 				{
 					scrollTop: $($(this).attr("href")).offset().top - 20,
@@ -195,23 +145,15 @@
 		});
 
 		/**
-		 * Animation on scroll
-		 */
-		function aos_init() {
-			AOS.init({
-				duration: 800,
-				easing: "ease-in-out",
-				once: true,
-				mirror: false,
-			});
-		}
-		window.addEventListener("load", () => {
-			aos_init();
-		});
-
-		/**
 		 * Preloader
 		 */
 		(() => $(".spinner").fadeOut("slow"))();
 	});
 })(jQuery);
+
+/**
+ * Animation on scroll
+ */
+(() => {
+	AOS.init({ duration: 800, easing: "ease-in-out", once: true, mirror: false });
+})();
