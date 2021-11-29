@@ -208,5 +208,10 @@
 		window.addEventListener("load", () => {
 			aos_init();
 		});
+
+		/**
+		 * Preloader
+		 */
+		(() => $(".spinner").fadeOut("slow"))();
 	});
 })(jQuery);
