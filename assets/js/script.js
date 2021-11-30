@@ -100,7 +100,7 @@
 		/**
 		 * Show "feature disabled" message
 		 */
-		$(".post-box").click((e) => {
+		$(".post-box, .disabled").click((e) => {
 			e.preventDefault();
 			disabledFeatures();
 		});
