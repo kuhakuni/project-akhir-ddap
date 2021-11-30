@@ -668,13 +668,14 @@ h1 {
 	font-size: 24px;
 	display: inline-block;
 	color: #000;
+	opacity: 0.6;
 	line-height: 0;
 	margin-right: 10px;
-	transition: 0.3s;
+	transition: 0.2s;
 }
 
 .footer .footer-top .social-links a:hover {
-	color: #000;
+	opacity: 1;
 }
 
 .footer .footer-top h4 {
