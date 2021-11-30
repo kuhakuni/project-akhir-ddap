@@ -548,6 +548,107 @@ h1 {
 		width: 80%;
 	}
 }
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+.footer {
+	background: #aeccd9;
+	padding: 0 0 30px 0;
+	font-size: 14px;
+}
+
+.footer .footer-top {
+	padding: 60px 0 30px 0;
+}
+
+@media (max-width: 992px) {
+	.footer .footer-top {
+		background-position: center bottom;
+	}
+}
+
+.footer .footer-top .footer-info {
+	margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-info .logo {
+	line-height: 0;
+	margin-bottom: 15px;
+}
+
+.footer .footer-top .social-links a {
+	font-size: 24px;
+	display: inline-block;
+	color: #000;
+	line-height: 0;
+	margin-right: 10px;
+	transition: 0.3s;
+}
+
+.footer .footer-top .social-links a:hover {
+	color: #000;
+}
+
+.footer .footer-top h4 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	position: relative;
+	padding-bottom: 12px;
+}
+
+.footer .footer-top .footer-links {
+	margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer .footer-top .footer-links ul li {
+	padding: 10px 0;
+	color: #000;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.footer .footer-top .footer-links ul li:first-child {
+	padding-top: 0;
+}
+
+.footer .footer-top .footer-links ul a {
+	color: #000;
+	font-weight: 500;
+	transition: 0.3s;
+	display: inline-block;
+	line-height: 1;
+}
+
+.footer .footer-top .footer-links ul a:hover {
+	text-decoration: underline;
+}
+
+.footer .footer-top .footer-contact p {
+	line-height: 26px;
+}
+
+@media (min-width: 992px) {
+	.footer .badge {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.footer .copyright {
+	text-align: center;
+	padding-top: 30px;
+	color: #000;
+}
 
 /*--------------------------------------------------------------
 # Back to top

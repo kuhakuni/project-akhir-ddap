@@ -100,7 +100,7 @@
 		/**
 		 * Show "feature disabled" message
 		 */
-		$(".disabled-features, .post-box").click((e) => {
+		$(".post-box").click((e) => {
 			e.preventDefault();
 			disabledFeatures();
 		});
@@ -121,7 +121,8 @@
 		 */
 		$('a[href^="#"]').on("click", function (e) {
 			e.preventDefault();
-			if (this.href.substring(this.href.lastIndexOf("/") + 1) === "#") return;
+			if (this.href.substring(this.href.lastIndexOf("/") + 1) === "#")
+				return disabledFeatures();
 			$("html, body").animate(
 				{
 					scrollTop: $($(this).attr("href")).offset().top - 20,
