@@ -1,0 +1,369 @@
+:root {
+	--color-primary: #ff5349;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+section {
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header {
+	transition: all 0.5s;
+	z-index: 997;
+	padding: 20px 0;
+}
+
+.header.header-scrolled {
+	background: #fff;
+	padding: 15px 0;
+	box-shadow: 0px 2px 20px rgba(68, 83, 109, 0.2);
+}
+
+.header .logo {
+	line-height: 0;
+}
+
+.header .logo img {
+	max-height: 40px;
+	margin-right: 6px;
+}
+
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+/**
+  * Desktop Navigation 
+  */
+.navbar {
+	padding: 0;
+}
+
+.navbar ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+
+.navbar li {
+	position: relative;
+}
+
+.navbar a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0 10px 30px;
+	font-size: 16px;
+	font-weight: 500;
+	color: #000;
+	white-space: nowrap;
+	transition: 0.3s;
+}
+
+.navbar a i {
+	font-size: 12px;
+	line-height: 0;
+	margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar a:active,
+.navbar a:focus,
+.navbar li:hover > a,
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover > a {
+	color: var(--color-primary);
+}
+
+.navbar .getstarted {
+	background: #fff;
+	padding: 8px 20px;
+	margin-left: 30px;
+	border: var(--color-primary) solid 2px;
+	border-radius: 8px;
+	color: var(--color-primary);
+}
+
+.navbar .getstarted:hover {
+	color: #fff;
+	background: var(--color-primary);
+}
+
+/**
+  * Mobile Navigation 
+  */
+.mobile-nav-toggle {
+	color: var(--color-primary);
+	font-size: 28px;
+	cursor: pointer;
+	display: none;
+	line-height: 0;
+	transition: 0.5s;
+}
+
+.mobile-nav-toggle.bi-x {
+	color: #fff;
+}
+
+@media (max-width: 991px) {
+	.mobile-nav-toggle {
+		display: block;
+	}
+	.navbar ul {
+		display: none;
+	}
+}
+
+.navbar-mobile {
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background: rgba(255, 83, 73, 0.9);
+	transition: 0.3s;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.navbar-mobile ul {
+	display: block;
+	position: absolute;
+	top: 55px;
+	right: 15px;
+	bottom: 15px;
+	left: 15px;
+	padding: 10px 0;
+	border-radius: 10px;
+	background-color: #fff;
+	overflow-y: auto;
+	transition: 0.3s;
+}
+
+.navbar-mobile a {
+	padding: 10px 20px;
+	font-size: 15px;
+	color: #000;
+}
+
+.navbar-mobile .getstarted {
+	margin: 15px;
+}
+
+/*--------------------------------------------------------------
+# Footer Section
+--------------------------------------------------------------*/
+.footer {
+	background: #aeccd9;
+	padding: 0 0 30px 0;
+	font-size: 14px;
+}
+
+.footer .footer-top {
+	padding: 60px 0 30px 0;
+}
+
+@media (max-width: 992px) {
+	.footer .footer-top {
+		background-position: center bottom;
+	}
+}
+
+.footer .footer-top .footer-info {
+	margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-info .logo {
+	line-height: 0;
+	margin-bottom: 15px;
+}
+
+.footer .footer-top .social-links a {
+	font-size: 24px;
+	display: inline-block;
+	color: #000;
+	opacity: 0.6;
+	line-height: 0;
+	margin-right: 10px;
+	transition: 0.2s;
+}
+
+.footer .footer-top .social-links a:hover {
+	opacity: 1;
+}
+
+.footer .footer-top h4 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #000;
+	position: relative;
+	padding-bottom: 12px;
+}
+
+.footer .footer-top .footer-links {
+	margin-bottom: 30px;
+}
+
+.footer .footer-top .footer-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer .footer-top .footer-links ul li {
+	padding: 10px 0;
+	color: #000;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.footer .footer-top .footer-links ul li:first-child {
+	padding-top: 0;
+}
+
+.footer .footer-top .footer-links ul a {
+	color: #000;
+	font-weight: 500;
+	transition: 0.3s;
+	display: inline-block;
+	line-height: 1;
+}
+
+.footer .footer-top .footer-links ul a:hover {
+	text-decoration: underline;
+}
+
+.footer .footer-top .footer-contact p {
+	line-height: 26px;
+}
+
+@media (min-width: 992px) {
+	.footer .badge {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+.footer .copyright {
+	text-align: center;
+	padding-top: 30px;
+	color: #000;
+}
+
+/*--------------------------------------------------------------
+# Back to top
+--------------------------------------------------------------*/
+.back-to-top {
+	cursor: pointer;
+	position: fixed;
+	visibility: hidden;
+	opacity: 0;
+	right: 15px;
+	bottom: 15px;
+	z-index: 1;
+	background: var(--color-primary);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	transition: all 0.5s;
+	box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.2);
+}
+
+.back-to-top i {
+	font-size: 24px;
+	color: #fff;
+}
+
+.back-to-top:hover {
+	background: #ff7169;
+}
+
+.back-to-top.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+.spinner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--color-primary);
+	z-index: 999999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner > div {
+	width: 18px;
+	height: 18px;
+	background-color: rgb(255, 255, 255);
+
+	border-radius: 100%;
+	display: inline-block;
+	-webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+	animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+	-webkit-animation-delay: -0.32s;
+	animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+	-webkit-animation-delay: -0.16s;
+	animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+	}
+}
+
+@keyframes sk-bouncedelay {
+	0%,
+	80%,
+	100% {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	40% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}

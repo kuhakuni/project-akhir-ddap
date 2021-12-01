@@ -120,9 +120,10 @@
 		 * Scroll to element
 		 */
 		$('a[href^="#"]').on("click", function (e) {
+			let link = this.href.substring(this.href.lastIndexOf("/") + 1);
 			e.preventDefault();
-			if (this.href.substring(this.href.lastIndexOf("/") + 1) === "#")
-				return disabledFeatures();
+			if (link === "#" || link === "artikel.html#") return disabledFeatures();
+
 			$("html, body").animate(
 				{
 					scrollTop: $($(this).attr("href")).offset().top - 20,
