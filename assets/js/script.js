@@ -135,14 +135,16 @@
 		/**
 		 * Testimonials slider
 		 */
-		new Swiper(".testimonials-slider", {
+		let swiper = new Swiper(".testimonials-slider", {
 			speed: 800,
 			loop: true,
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			slidesPerView: "auto",
+			slidesPerView: 1,
+			loopedSlides: 1,
+			loopAdditionalSlides: 10,
 			pagination: {
 				el: ".swiper-pagination",
 				type: "bullets",
@@ -150,9 +152,9 @@
 			},
 			updateOnWindowResize: true,
 			spaceBetween: 200,
-			slidesPerView: 1,
 		});
-
+		swiper.loopDestroy();
+		swiper.loopCreate();
 		/**
 		 * Preloader
 		 */
