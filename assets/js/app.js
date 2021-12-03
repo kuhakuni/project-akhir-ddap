@@ -1,3 +1,29 @@
+$(document).ready(function () {
+	/**
+	 * Testimonials slider
+	 */
+	let swiper = new Swiper(".testimonials-slider", {
+		speed: 800,
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		slidesPerView: 1,
+		loopedSlides: 1,
+		loopAdditionalSlides: 10,
+		pagination: {
+			el: ".swiper-pagination",
+			type: "bullets",
+			clickable: true,
+		},
+		updateOnWindowResize: true,
+		spaceBetween: 200,
+	});
+	swiper.loopDestroy();
+	swiper.loopCreate();
+});
+
 async function fetchData() {
 	let url = "assets/js/data.json";
 	try {
