@@ -134,6 +134,28 @@
 		});
 
 		/**
+		 * Testimonials slider
+		 */
+		new Swiper(".testimonials-slider", {
+			speed: 800,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			slidesPerView: 1,
+			loopedSlides: 1,
+			loopAdditionalSlides: 10,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "bullets",
+				clickable: true,
+			},
+			updateOnWindowResize: true,
+			spaceBetween: 200,
+		});
+
+		/**
 		 * Preloader
 		 */
 		(() => $(".spinner").fadeOut("slow"))();
