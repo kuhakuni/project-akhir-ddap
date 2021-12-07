@@ -310,6 +310,17 @@ section {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
+.show {
+	display: flex;
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+	display: none;
+	transition: all 500ms;
+}
+
 .spinner {
 	position: fixed;
 	top: 0;
@@ -318,7 +329,6 @@ section {
 	bottom: 0;
 	background-color: var(--color-primary);
 	z-index: 999999;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 }
