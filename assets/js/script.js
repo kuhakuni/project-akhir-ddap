@@ -134,6 +134,7 @@ ready(() => {
 		element.addEventListener("click", (event) => {
 			event.preventDefault();
 			let hrefLink = element.getAttribute("href");
+			if (hrefLink === "#heroCarousel") return;
 			if (hrefLink === "#") return disabledFeatures();
 			document.querySelector(hrefLink).scrollIntoView({
 				behavior: "smooth",
