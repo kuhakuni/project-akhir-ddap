@@ -177,22 +177,14 @@ ready(() => {
 	 */
 	let carouselBg = select(".hero");
 	let carouselItems = select(".carousel-item", true);
-	let firstCarousel = carouselItems[0];
-	let secondCarousel = carouselItems[1];
-	let thirdCarousel = carouselItems[2];
-	on("click", "#heroCarousel", function () {
-		if (firstCarousel.classList.contains("active")) {
-			carouselBg.style.background =
-				"url(assets/img/carousel-bg.png) no-repeat center center / cover";
-		}
-		if (secondCarousel.classList.contains("active")) {
-			carouselBg.style.background =
-				"url(assets/img/carousel-bg-2.jpg) no-repeat center center / cover";
-		}
-		if (thirdCarousel.classList.contains("active")) {
-			carouselBg.style.background =
-				"url(assets/img/carousel-bg-3.jpg) no-repeat center center / cover";
-		}
+	on("click", "#heroCarousel", () => {
+		carouselItems.forEach((item, index) => {
+			if (item.classList.contains("active")) {
+				carouselBg.style.background = `url(assets/img/carousel-bg-${
+					index + 1
+				}.jpg) no-repeat center center / cover`;
+			}
+		});
 	});
 });
 
