@@ -1,5 +1,6 @@
 :root {
 	--color-primary: #ff5349;
+	--rgb-color-primary: 255, 83, 73;
 }
 
 body {
@@ -169,6 +170,125 @@ section {
 
 .navbar-mobile .getstarted {
 	margin: 15px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+	width: 100%;
+	min-height: 80vh;
+	overflow: hidden;
+	background: linear-gradient(0deg, rgb(0, 0, 0, 70%), rgba(0, 0, 0, 0%)),
+		url("../img/carousel-bg.png");
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+	margin-bottom: -90px;
+	z-index: 99;
+	transition: 0.3s;
+}
+.hero .carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+.hero h2 {
+	color: #fff;
+	margin-bottom: 30px;
+	font-weight: 700;
+}
+.hero p {
+	width: 80%;
+	margin: 0 auto 30px auto;
+	color: #fff;
+}
+.hero .carousel-control-prev,
+.hero .carousel-control-next {
+	width: 10%;
+}
+.hero .carousel-control-next-icon,
+.hero .carousel-control-prev-icon {
+	font-size: 48px;
+	line-height: 1;
+	width: auto;
+	height: auto;
+}
+.hero .btn-get-started {
+	font-weight: 500;
+	padding: 12px 32px;
+	border-radius: 50px;
+	transition: 0.5s;
+	margin: 10px;
+	color: #fff;
+	border: 2px solid var(--color-primary);
+}
+.hero .btn-get-started:hover {
+	background: var(--color-primary);
+	color: #fff;
+}
+
+@media (min-width: 1024px) {
+	.hero p {
+		width: 60%;
+	}
+	.hero .carousel-control-prev,
+	.hero .carousel-control-next {
+		width: 5%;
+	}
+}
+@media (max-width: 768px), (max-height: 700px) {
+	.hero {
+		padding: 100px 0;
+	}
+	.hero h2 {
+		font-size: 28px;
+	}
+}
+
+/*--------------------------------------------------------------
+# Search Section
+--------------------------------------------------------------*/
+
+.search {
+	padding-top: 0;
+	position: relative;
+	z-index: 100;
+}
+.search .search-box {
+	padding: 70px 30px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease-in-out;
+	border-radius: 10px;
+}
+
+.search .form-search {
+	display: block;
+	width: 80%;
+	padding: 0.5rem 0.75rem;
+	color: #212529;
+	border: none;
+	border-radius: 25px 0px 0px 25px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	transition: border 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search .form-search:focus {
+	color: #000;
+	background-color: #fff;
+	outline: 0;
+}
+
+.search .btn-search {
+	box-shadow: 0.3rem 0.5rem 1rem rgba(0, 0, 0, 0.15);
+	margin-left: -1px;
+	border-radius: 0px 25px 25px 0px;
+	padding: 0.44rem 1rem;
+	color: #fff;
+	background-color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
