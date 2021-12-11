@@ -179,15 +179,23 @@ section {
 	width: 100%;
 	min-height: 80vh;
 	overflow: hidden;
-	background: linear-gradient(0deg, rgb(0, 0, 0, 70%), rgba(0, 0, 0, 0%)),
-		url("../img/carousel-bg.png");
-	background-position: center center;
-	background-size: cover;
 	position: relative;
 	margin-bottom: -90px;
 	z-index: 99;
-	transition: 0.3s;
+	transition: 500ms;
 }
+
+.hero:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg, rgb(0, 0, 0, 70%), rgba(0, 0, 0, 0%));
+	z-index: -1;
+}
+
 .hero .carousel-container {
 	display: flex;
 	justify-content: center;
