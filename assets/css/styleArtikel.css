@@ -179,6 +179,8 @@ section {
 	width: 100%;
 	min-height: 80vh;
 	overflow: hidden;
+	background: linear-gradient(0deg, rgb(0, 0, 0, 70%), rgba(0, 0, 0, 0%)),
+		url("../img/carousel-bg.png") no-repeat center center / cover;
 	position: relative;
 	margin-bottom: -90px;
 	z-index: 99;
