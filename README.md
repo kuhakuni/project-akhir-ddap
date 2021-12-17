@@ -12,4 +12,4 @@
 
 Repository ini khusus digunakan untuk menyimpan project akhir mata kuliah DDAP (Dasar Desain Antarmuka Pengguna).
 
-Website ini dibangun dengan menggunakan bahasa `HTML`, `CSS`, dan `Javascript` serta dengan bantuan Framework CSS `Bootstrap` dan Library JS `Sweetalert`, `JQuery`, `AOS`, dan `Swiper JS`.
+Website ini dibangun dengan menggunakan bahasa `HTML`, `CSS`, dan `Javascript` serta dengan bantuan Framework CSS `Bootstrap` dan Library JS `Sweetalert`, `AOS`, dan `Swiper JS`.
